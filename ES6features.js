@@ -64,3 +64,26 @@ console.log(studentInfo.branch); // CSE
 studentInfo.branch = "NONE";
 console.log(studentInfo.branch); // NONE
 
+//Arrow function {()=>} is concise way of writing Javascript functions in shorter way.
+// Arrow functions are anonymous functions i.e. functions without a name and are not bound by an identifier. Arrow functions do not return any value and can be declared without the function keyword. They are also called Lambda Functions.
+
+// Syntax:
+
+const arrow = () => {
+    console.log("Arrow Function!");
+  };
+  //arrow function with parameter
+  const number = (x, y, z) => {
+    console.log(x + y + z);
+  };
+  
+  number(10, 20, 30);
+  
+  //arrow function with default parameter
+  const addNumber = (x, y, z = 30) => {
+    console.log(x + " " + y + " " + z);
+  };
+  
+  addNumber(10, 20);
+  
+  

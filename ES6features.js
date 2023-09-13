@@ -86,4 +86,32 @@ const arrow = () => {
   
   addNumber(10, 20);
   
+  //Template literals
+  
+  // Template Literal in ES6 provides new features
+  // to create a string that gives more control over dynamic strings.
+  //  Traditionally, String is created using single quotes (‘) or double quotes (“) quotes.
+  //  Template literal is created using the backtick (`) character.
+  
+  // Syntax:
+  
+  var s = `hello world`;
+  
+  // Multiline Strings: In-order to create a multiline string an escape sequence
+  //  \n was used to give new line character.
+  // Template Literals there is no need to add \n string ends only when it gets backtick (`) character.
+  
+  // Without template literal
+  console.log(
+    "to gain knowledge  \n hard work , and preparations is needed!"
+  );
+  
+  // With template literal
+  console.log(`to gain knowledge hard work
+  and preparations is needed!`);
+  // Expressions: To dynamically add values into new Template Literals expressions are used. 
+  // The ${} syntax allows an expression in it that produces the value. 
+  
+  
+  
   

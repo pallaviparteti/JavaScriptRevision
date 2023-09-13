@@ -145,3 +145,41 @@ console.log(value1);
 console.log(value2);
 console.log(value3);
 console.log(value4);
+
+// Default Parameters
+
+// Default parameters allow you to define a parameter in advance.
+
+// ES6
+function fun(a, b = 1) {
+  return a + b;
+}
+
+console.log(fun(2, 1)); // 3
+console.log(fun(2)); // 3
+
+// Classes
+
+// Classes are the core of Object-Oriented programming(OOPs).
+// ES6 introduced classes in javascript.
+// Classes in javascript can be used to create new Objects with the help of a constructor,
+// each class can only have one constructor inside it.
+
+Syntax:
+
+// class classname {
+//   constructor(parameter) {
+//     this.classname = parameter;
+//   }
+// }
+//example
+class Student {
+  constructor(nameOfStudent, trackScrore) {
+    this.nameOfStudent = nameOfStudent;
+    this.trackScrore = trackScrore;
+  }
+}
+const stdObj = new Student("pallavi", 0);
+const stdObj1 = new Student("any",4);
+console.log(stdObj.nameOfStudent);
+console.log(stdObj.trackScrore);

@@ -70,48 +70,78 @@ console.log(studentInfo.branch); // NONE
 // Syntax:
 
 const arrow = () => {
-    console.log("Arrow Function!");
-  };
-  //arrow function with parameter
-  const number = (x, y, z) => {
-    console.log(x + y + z);
-  };
-  
-  number(10, 20, 30);
-  
-  //arrow function with default parameter
-  const addNumber = (x, y, z = 30) => {
-    console.log(x + " " + y + " " + z);
-  };
-  
-  addNumber(10, 20);
-  
-  //Template literals
-  
-  // Template Literal in ES6 provides new features
-  // to create a string that gives more control over dynamic strings.
-  //  Traditionally, String is created using single quotes (‘) or double quotes (“) quotes.
-  //  Template literal is created using the backtick (`) character.
-  
-  // Syntax:
-  
-  var s = `hello world`;
-  
-  // Multiline Strings: In-order to create a multiline string an escape sequence
-  //  \n was used to give new line character.
-  // Template Literals there is no need to add \n string ends only when it gets backtick (`) character.
-  
-  // Without template literal
-  console.log(
-    "to gain knowledge  \n hard work , and preparations is needed!"
-  );
-  
-  // With template literal
-  console.log(`to gain knowledge hard work
+  console.log("Arrow Function!");
+};
+//arrow function with parameter
+const number = (x, y, z) => {
+  console.log(x + y + z);
+};
+
+number(10, 20, 30);
+
+//arrow function with default parameter
+const addNumber = (x, y, z = 30) => {
+  console.log(x + " " + y + " " + z);
+};
+
+addNumber(10, 20);
+
+//Template literals
+
+// Template Literal in ES6 provides new features
+// to create a string that gives more control over dynamic strings.
+//  Traditionally, String is created using single quotes (‘) or double quotes (“) quotes.
+//  Template literal is created using the backtick (`) character.
+
+// Syntax:
+
+var s = `hello world`;
+
+// Multiline Strings: In-order to create a multiline string an escape sequence
+//  \n was used to give new line character.
+// Template Literals there is no need to add \n string ends only when it gets backtick (`) character.
+
+// Without template literal
+console.log("to gain knowledge  \n hard work , and preparations is needed!");
+
+// With template literal
+console.log(`to gain knowledge hard work
   and preparations is needed!`);
-  // Expressions: To dynamically add values into new Template Literals expressions are used. 
-  // The ${} syntax allows an expression in it that produces the value. 
-  
-  
-  
-  
+// Expressions: To dynamically add values into new Template Literals expressions are used.
+// The ${} syntax allows an expression in it that produces the value.
+
+//   Object and Array Desctructuring
+
+//   Destructing in javascript basically means the breaking down of a complex structure(Objects or arrays)
+//   into simpler parts.
+
+// object destructuring
+// ES6
+const college = {
+  clgName: "PRMITR",
+  established: "1981",
+  isPrivate: false,
+};
+
+let { clgName, established, isPrivate } = college;
+
+console.log(clgName); // PRMITR
+console.log(established); // 1981
+console.log(isPrivate); // false
+
+//Array Destructuring
+
+const arr = [
+  "hello",
+  "javascript",
+  "you",
+  "are",
+  "simplest",
+  "imakes",
+  "difficult",
+];
+const [value1, value2, value3, value4] = arr;
+console.log(value1);
+console.log(value2);
+console.log(value3);
+console.log(value4);

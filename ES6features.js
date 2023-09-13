@@ -145,3 +145,90 @@ console.log(value1);
 console.log(value2);
 console.log(value3);
 console.log(value4);
+
+// Default Parameters
+
+// Default parameters allow you to define a parameter in advance.
+
+// ES6
+function fun(a, b = 1) {
+  return a + b;
+}
+
+console.log(fun(2, 1)); // 3
+console.log(fun(2)); // 3
+
+// Classes
+
+// Classes are the core of Object-Oriented programming(OOPs).
+// ES6 introduced classes in javascript.
+// Classes in javascript can be used to create new Objects with the help of a constructor,
+// each class can only have one constructor inside it.
+
+Syntax:
+
+// class classname {
+//   constructor(parameter) {
+//     this.classname = parameter;
+//   }
+// }
+//example
+// class Student {
+//   constructor(nameOfStudent, trackScrore) {
+//     this.nameOfStudent = nameOfStudent;
+//     this.trackScrore = trackScrore;
+//   }
+// }
+// const stdObj = new Student("pallavi", 0);
+// const stdObj1 = new Student("any",4);
+// console.log(stdObj.nameOfStudent);
+// console.log(stdObj.trackScrore);
+
+// Rest parameter and spread operator
+
+// Rest Parameter: The rest parameter syntax allows us to represent an indefinite number of arguments
+// as an array. With the help of a rest parameter, 
+// a function can be called with any number of arguments, no matter how it was defined. 
+// ES6 rest parameter
+function fun(...input){
+	let sum = 0;
+	for(let i of input){
+		sum+=i;
+	}
+	return sum;
+}
+
+console.log(fun(1,2)); // 3
+console.log(fun(1,2,3)); // 6
+console.log(fun(1,2,3,4,5)); // 15
+
+// Spread Operator: The Spread operator provided by
+//  ES6 that allows us the privilege to obtain a list of parameters from an array. 
+// It is mostly used in the variable array where there is more than 1 value is expected.
+// It allows us the privilege to obtain a list of parameters from an array. 
+// Spread operator can be used in many cases, 
+// like when we want to expand, copy, concat, with math object.
+
+// 
+//spread operator doing the concat job
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5];
+
+concatArr = [...arr1, ...arr2];
+console.log(concatArr); // [ 1, 2, 3, 4, 5 ]
+
+
+//// spread operator for copying
+let array = ['a', 'b', 'c'];
+let array2 = [...array];
+
+console.log(array);
+// [ 'a', 'b', 'c' ]
+
+array2.push('d');
+//inserting an element at the end of arr2
+
+console.log(array2);
+// [ 'a', 'b', 'c', 'd' ]
+console.log(array);
+// [ 'a', 'b', 'c' ]

@@ -399,3 +399,14 @@ try {
   // This catch block does not declare a binding for the exception object
   console.log("An error occurred, but we don't need to access the exception object here.");
 }
+
+// String.prototype.trimStart() and String.prototype.trimEnd():
+
+// These methods provide a straightforward way to remove leading and 
+// trailing white spaces from strings. They complement the existing trim() method, 
+// enhancing string manipulation capabilities.
+
+
+const text = '   valid input!   ';
+console.log(text.trimStart());  
+console.log(text.trimEnd());  

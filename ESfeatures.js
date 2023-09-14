@@ -276,3 +276,49 @@ console.log(ar.includes(4)); // false
 console.log(2 ** 3); // Output: 8
 console.log(4 ** 0.5); // Output: 2
 
+// ES8 Features
+// Async/Await:
+
+// Async functions and the await keyword simplify asynchronous programming.
+// They allow you to write asynchronous code that looks synchronous,
+// making it easier to reason about and maintain.
+// Async functions automatically wrap return values in promises,
+// and the await keyword suspends the execution of the function until the promise is resolved.
+
+const promise1 = new Promise((resolve, reject) => {
+  const stringValue = "pass";
+  if (stringValue === "fail") {
+    resolve("you have cleared the test");
+  } else {
+    reject("you have failed the test");
+  }
+});
+function aysncFunction() {
+  return promise1;
+}
+
+async function printPromise() {
+  try{
+  const resultValue = await aysncFunction();
+  console.log(resultValue);
+}catch(error){
+  console.log(error)
+}
+}
+printPromise();
+
+//Object.values() and Object.entries():
+
+// These new Object methods make it easier to iterate over object properties.
+// Object.values() returns an array of the object’s enumerable property values,
+//  while Object.entries() returns an array of key-value pairs.
+
+const user = {
+  name: "payal jain",
+  age: 23,
+  email: "payaljain@gmail.com",
+};
+console.log(Object.values(user));
+console.log(Object.entries(user));
+console.log(Object.keys(user));
+

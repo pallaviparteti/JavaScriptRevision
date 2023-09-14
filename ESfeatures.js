@@ -165,8 +165,6 @@ console.log(fun(2)); // 3
 // Classes in javascript can be used to create new Objects with the help of a constructor,
 // each class can only have one constructor inside it.
 
-Syntax:
-
 // class classname {
 //   constructor(parameter) {
 //     this.classname = parameter;
@@ -187,29 +185,29 @@ Syntax:
 // Rest parameter and spread operator
 
 // Rest Parameter: The rest parameter syntax allows us to represent an indefinite number of arguments
-// as an array. With the help of a rest parameter, 
-// a function can be called with any number of arguments, no matter how it was defined. 
+// as an array. With the help of a rest parameter,
+// a function can be called with any number of arguments, no matter how it was defined.
 // ES6 rest parameter
-function fun(...input){
-	let sum = 0;
-	for(let i of input){
-		sum+=i;
-	}
-	return sum;
+Syntax: function fun(...input) {
+  let sum = 0;
+  for (let i of input) {
+    sum += i;
+  }
+  return sum;
 }
 
-console.log(fun(1,2)); // 3
-console.log(fun(1,2,3)); // 6
-console.log(fun(1,2,3,4,5)); // 15
+console.log(fun(1, 2)); // 3
+console.log(fun(1, 2, 3)); // 6
+console.log(fun(1, 2, 3, 4, 5)); // 15
 
 // Spread Operator: The Spread operator provided by
-//  ES6 that allows us the privilege to obtain a list of parameters from an array. 
+//  ES6 that allows us the privilege to obtain a list of parameters from an array.
 // It is mostly used in the variable array where there is more than 1 value is expected.
-// It allows us the privilege to obtain a list of parameters from an array. 
-// Spread operator can be used in many cases, 
+// It allows us the privilege to obtain a list of parameters from an array.
+// Spread operator can be used in many cases,
 // like when we want to expand, copy, concat, with math object.
 
-// 
+//
 //spread operator doing the concat job
 let arr1 = [1, 2, 3];
 let arr2 = [4, 5];
@@ -217,15 +215,14 @@ let arr2 = [4, 5];
 concatArr = [...arr1, ...arr2];
 console.log(concatArr); // [ 1, 2, 3, 4, 5 ]
 
-
 //// spread operator for copying
-let array = ['a', 'b', 'c'];
+let array = ["a", "b", "c"];
 let array2 = [...array];
 
 console.log(array);
 // [ 'a', 'b', 'c' ]
 
-array2.push('d');
+array2.push("d");
 //inserting an element at the end of arr2
 
 console.log(array2);
@@ -235,31 +232,47 @@ console.log(array);
 
 //promise
 
-const promise = new Promise((resolve , reject)=>{
-    let number = 20;
-    setTimeout(()=>{
-        if(number%10 == 0){
-        resolve("number divisible by 10")
+const promise = new Promise((resolve, reject) => {
+  let number = 20;
+  setTimeout(() => {
+    if (number % 10 == 0) {
+      resolve("number divisible by 10");
+    } else {
+      reject("number is not divisible by 10");
     }
-    else{
-        reject("number is not divisible by 10")
-    }
-    },3000)
-    
-})
+  }, 3000);
+});
 
-function print(){
-    // console.log( await promise)
-    // // return promise.then((message)=>{
-    // //     console.log(message);
-    // // }).catch((error)=>{
-    // //     console.log(error);
-    // // })
-    return promise
+function print() {
+  // console.log( await promise)
+  // // return promise.then((message)=>{
+  // //     console.log(message);
+  // // }).catch((error)=>{
+  // //     console.log(error);
+  // // })
+  return promise;
 }
 
-async function returnPromise(){
-    const value = await print()
-    console.log(value)
+async function returnPromise() {
+  const value = await print();
+  console.log(value);
 }
-returnPromise()
+returnPromise();
+
+//ES7 features
+// Array.prototype.includes():
+
+// The includes() method simplifies array element searching.
+// It allows you to check if an array contains a specific element and returns a Boolean value.
+const ar = ["this", "that", "their", "them"];
+console.log(ar.includes("this")); // true
+console.log(ar.includes(4)); // false
+
+// Exponentiation Operator (**):
+
+// The exponentiation operator ** provides a concise way to calculate exponentiation.
+//  It replaces the Math.pow() method, which can be cumbersome to use in certain cases.
+
+console.log(2 ** 3); // Output: 8
+console.log(4 ** 0.5); // Output: 2
+

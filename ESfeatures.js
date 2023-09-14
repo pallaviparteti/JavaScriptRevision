@@ -366,3 +366,36 @@ const languages = student.flatMap(student=> student.languages);
 
 console.log(languages); // Output: ['JavaScript', 'Python', 'Java', 'C++']
 
+//Optional catch Binding
+//The try...catch statement is used to handle any errors that may occur.
+try {
+  // code that may cause an error
+} catch (error) {
+  // code that handles the error
+} 
+
+// ES2019 introduced the optional catch binding that allows you to omit the
+// catch binding and its surrounding parentheses.
+
+try {
+
+} catch {
+
+}
+//
+// Logging Errors:
+// When you want to log errors but don't need to handle them in detail.
+
+try {
+  // Code that may throw an exception
+} catch {
+  console.error("An error occurred.");
+}
+//example
+try {
+  // Code that may throw an exception
+  throw new Error("This error is occured.");
+} catch {
+  // This catch block does not declare a binding for the exception object
+  console.log("An error occurred, but we don't need to access the exception object here.");
+}

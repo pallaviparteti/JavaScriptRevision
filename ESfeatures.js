@@ -406,7 +406,28 @@ try {
 // trailing white spaces from strings. They complement the existing trim() method, 
 // enhancing string manipulation capabilities.
 
-
 const text = '   valid input!   ';
 console.log(text.trimStart());  
-console.log(text.trimEnd());  
+console.log(text.trimEnd()); 
+
+//finally
+// finally block is used in conjunction with try and catch blocks to specify 
+// a piece of code that should always be executed, 
+// regardless of whether an exception is thrown or not
+
+function checkEvenOrOdd(number) {
+  try {
+    if (number % 2 === 0) {
+      console.log(`${number} is even.`);
+    } else {
+      console.log(`${number} is odd.`);
+    }
+  } catch (error) {
+    console.error('An error occurred:', error.message);
+  } finally {
+    console.log('Finally block: Checking complete.');
+  }
+}
+
+checkEvenOrOdd(5);
+checkEvenOrOdd(10);

@@ -322,3 +322,91 @@ console.log(Object.values(user));
 console.log(Object.entries(user));
 console.log(Object.keys(user));
 
+// ES10 Features
+
+// Array.prototype.flat() and Array.prototype.flatMap():
+
+// These methods provide concise ways to flatten nested arrays (flat()) and perform mapping operations while flattening (flatMap()).
+// They make it easier to work with arrays of varying depths.
+
+
+//flat() Method
+
+// The flat() method creates a new array 
+// with all sub-array elements concatenated into it at a specified depth.
+const numberArray = [1, [2, [3]]];
+console.log(numberArray.flat());  // Output: [1, 2, [3]]
+//nested array
+const deeplyNestedArray = [1, [2, [3, [4]]]];
+const flatArray = deeplyNestedArray.flat(2); // Flattens to a depth of 2
+
+console.log(flatArray); // Output: [1, 2, 3, [4]]
+
+// flatMap() Method
+
+// The flatMap() method first maps each element using a mapping function,
+// then flattens the result into a new array.
+
+const numbers = [1, 2, 3];
+console.log(numbers.flatMap(x => [x * 2]));  // Output: [2, 4, 6]
+
+const numberValue = [1, 2, 3, 4];
+const doubled = numberValue.flatMap(num => [num, num * 2]);
+
+console.log(doubled); // Output: [1, 2, 2, 4, 3, 6, 4, 8]
+
+// Flattening and Mapping Objects
+
+const student = [
+  { name: 'PAYAL', languages: ['JavaScript', 'Python'] },
+  { name: 'PIYANSHU', languages: ['Java', 'C++'] },
+];
+
+const languages = student.flatMap(student=> student.languages);
+
+console.log(languages); // Output: ['JavaScript', 'Python', 'Java', 'C++']
+
+//Optional catch Binding
+//The try...catch statement is used to handle any errors that may occur.
+try {
+  // code that may cause an error
+} catch (error) {
+  // code that handles the error
+} 
+
+// ES2019 introduced the optional catch binding that allows you to omit the
+// catch binding and its surrounding parentheses.
+
+try {
+
+} catch {
+
+}
+//
+// Logging Errors:
+// When you want to log errors but don't need to handle them in detail.
+
+try {
+  // Code that may throw an exception
+} catch {
+  console.error("An error occurred.");
+}
+//example
+try {
+  // Code that may throw an exception
+  throw new Error("This error is occured.");
+} catch {
+  // This catch block does not declare a binding for the exception object
+  console.log("An error occurred, but we don't need to access the exception object here.");
+}
+
+// String.prototype.trimStart() and String.prototype.trimEnd():
+
+// These methods provide a straightforward way to remove leading and 
+// trailing white spaces from strings. They complement the existing trim() method, 
+// enhancing string manipulation capabilities.
+
+
+const text = '   valid input!   ';
+console.log(text.trimStart());  
+console.log(text.trimEnd());  
